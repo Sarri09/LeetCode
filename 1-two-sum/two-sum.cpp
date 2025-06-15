@@ -1,13 +1,16 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
-        for (int i = 0; i < nums.size(); i++) {
-            for (int j = i + 1; j < nums.size(); j++) {
-                if (nums[j] == target - nums[i]) {
-                    return {i, j};
-                }
-            }
+        map<int, int> set;
+
+        for (int i = 0; i < nums.size(); ++i) {
+        int candidate = target - nums[i];
+        if (set.count(candidate) != 0) {
+            return {set[candidate], i};
         }
-        return {};
+        set[nums[i]] = i;
+    }
+    return {};
+
     }
 };
