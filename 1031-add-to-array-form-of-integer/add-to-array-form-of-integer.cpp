@@ -11,7 +11,8 @@ public:
             int val = 0;
             int valk = 0;
             if (iterator >= 0) {
-                val = num[iterator--];
+                val = num[iterator];
+                iterator--;
             }
             if (k > 0) {
                 valk = k%10;
