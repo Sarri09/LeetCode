@@ -18,9 +18,7 @@ public:
             valk = k%10;
             k = k/10;
             int sum = val + valk + carry;
-
             carry = sum/10;
-
             finalsum = sum%10;
 
             result.push_back(finalsum); 
