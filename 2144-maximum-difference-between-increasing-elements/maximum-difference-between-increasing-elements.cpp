@@ -13,7 +13,6 @@ public:
                 }        
             }
         }
-        
         if (maxdist == 0) {
             return -1;
         }
