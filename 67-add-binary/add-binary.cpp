@@ -9,14 +9,12 @@ public:
         while (LargA >= 0 || LargB >= 0 || carry) {
             int sum = carry;
             if (LargA >= 0) {
-                sum = sum + a[LargA] - '0';
-                LargA--;
+                sum = sum + a[LargA--] - '0';
             }
             if (LargB >= 0) {
-                sum = sum + b[LargB] - '0';
-                LargB--;
+                sum = sum + b[LargB--] - '0';
             }
-            
+
             result = char(sum % 2 + '0') + result;
             carry = sum / 2;
         }
