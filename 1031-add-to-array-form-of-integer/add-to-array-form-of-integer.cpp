@@ -14,10 +14,9 @@ public:
                 val = num[iterator];
                 iterator--;
             }
-            if (k > 0) {
-                valk = k%10;
-                k = k/10;
-            }
+            
+            valk = k%10;
+            k = k/10;
             int sum = val + valk + carry;
 
             carry = sum/10;
