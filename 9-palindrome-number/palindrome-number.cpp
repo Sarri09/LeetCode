@@ -6,7 +6,6 @@ public:
         }
         int x_ = 0;
         long long reverse = 0;
-
         x_ = x;
 
         while (x_ > 0) {
