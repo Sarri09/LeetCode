@@ -7,7 +7,7 @@ public:
 
         for (int i = 0; i < s.length(); i++) {
             char currentChar = s[i];
-            if (charIndex.count(currentChar) && charIndex[currentChar] >= start) {
+            if (charIndex.contains(currentChar) && charIndex[currentChar] >= start) {
                 start = charIndex[currentChar] + 1;
             }
             charIndex[currentChar] = i;
