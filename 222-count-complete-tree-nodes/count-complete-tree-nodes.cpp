@@ -14,23 +14,6 @@ public:
     int countNodes(TreeNode* root) {
         if (!root) return 0;
 
-        int leftHeight = getHeight(root, true);
-        int rightHeight = getHeight(root, false);
-
-        if (leftHeight == rightHeight) {
-            return pow(2,leftHeight) - 1; // cuando el arbol es total, la formula es 2^altura - 1 
-        } 
-        return 1 /*suma uno cada vez que encuentra un nodo*/ + countNodes(root->left) + countNodes(root->right);
-    }               // Formula general para contar nodos
-
-    int getHeight(TreeNode* root, bool isLeft) {
-        int height = 0;
-
-        while (root) { // mientras no sea nullptr
-             height++;
-             root = isLeft ? root->left : root->right;
-        }
-
-        return height;
+        return 1 + countNodes(root->left) + countNodes(root->right); 
     }
 };
